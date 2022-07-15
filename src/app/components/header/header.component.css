@@ -1,0 +1,140 @@
+.header_top{
+    height: 95px ;
+    background-color: #100c08 ;
+    font-size: 14px;
+    display: flex;
+    color: white;
+    padding-right: 8px;
+}
+.header_menu{
+    display: flex;
+    padding:10px 8px 8px 8px;
+}
+.header_menu > div{
+    margin: 8px;
+    
+}
+.header_menu_logo{
+    object-fit: contain;
+    width: 100px;
+    margin: 12px 20px 0px 2px;
+}
+.ddcategory{
+    margin-top: 16px;
+    margin-left: 10px;
+}
+.header_menu_signin{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.header_menu_top_item{
+    font-size:10px;
+color:peachpuff
+}
+.header_menu_bottom_item{
+    font-size: 13px;
+    font-weight: 800;
+}
+#logo-img{
+    width: 65px;
+    height: 60px;
+    top: 0px;
+    left: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+.btn-outline-success{
+    border-color: white !important;
+    color: black !important;
+    background-color: white;
+}
+#search-input{
+    width: 300px;
+}
+#navbarDropdown{
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: large;
+    color: white;
+}
+#signin-box{
+    width: 290px;
+    flex-direction: row;
+    float: right;
+    position: absolute;
+    right: 0;
+}
+#Admin{
+    font-size: 17px;
+    font-weight: bold;
+    padding: 27px 10px 15px 10px;
+    color:rgb(245, 189, 189);
+    right: 290px;
+    float: right;
+    position: absolute;
+}
+#wishList{
+    
+    font-weight: bold;   
+    font-size: 20px;
+    color:crimson;
+    padding-left: 10px;
+    float: right;
+    padding-top:22px;
+}
+#wishList:hover{
+   color:pink;
+   
+}
+
+#signin,#register{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 10px 15px 10px;
+    color:white;
+}
+#user-home{
+    flex-direction: row;
+    float: right;
+    position: absolute;
+    right: 5px;
+    padding-top: 30px;
+}
+#user-name,#cart{
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px 10px 15px 10px;
+    color:white;
+}
+.log-in{        
+    color:#100c08;
+    position: absolute;
+    width: 260px;
+    left: calc(100% - 260px);
+    background-color: white ;
+    padding: 20px;
+    border-style: dotted;
+    border-width: 1px;
+    border-color: #100c08;
+         
+}
+#signin-btn{
+    color:#100c08;
+    background-color: white;
+    border-color: #100c08;
+    margin-top: 10px;
+    margin-right: 8px;
+}
+.active-link{
+    font-weight: bold;
+    color: green;
+}
+#cart{
+    font-size: 22px;
+    padding-top: 19px;
+    padding-left:28px;
+}
+
+
+

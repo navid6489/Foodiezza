@@ -1,0 +1,15 @@
+<div class="container mt-4 mb-4" >
+    <h2 class="text-center">Your Wishlist</h2>
+    <div class="row"*ngIf="wishlistArray.length !=0 ">    
+      <div class="col-lg-3 mt-3" *ngFor="let dt of wishlistArray ">
+        <div class="ourspecialsBox" *ngIf="dt.addedToWishList">
+          <img class="specialsCard" src="{{dt.imageUrl}}"/>
+          <h6>{{dt.foodName}}</h6>
+          <p>{{dt.price|currency:"INR":"symbol" }}</p>          
+          <button class="btn btn-primary" id="addTOCartBtn" (click)="addToCart(dt);removeCart(dt);updateBool(dt);" >Add to Bag</button>  
+          <button class="btn btn-primary" (click)="removeCart(dt);updateBool(dt);" >Remove</button>  
+        </div>
+      </div>
+    </div>
+   </div>
+  

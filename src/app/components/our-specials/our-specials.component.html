@@ -1,0 +1,23 @@
+<div class="container mt-4 mb-4">
+  <h2 class="text-center">Explore The  <span class="highlight">Taste</span></h2>
+  <div class="row"> 
+       <div class="col-lg-3 mt-3" *ngFor="let food of specialsResult |filter:searchKey:filterKey  | paginate: { itemsPerPage: 8, currentPage: p }">
+        <div class="ourspecialsBox">        
+        <img class="specialsCard" src="{{food.imageUrl}}"/>
+        <h6>{{food.foodName}}</h6>
+        <p>{{food.price|currency:"INR":"symbol" }}</p>
+        <button class="btn btn-primary" (click)=addtocart(food)>Add to Bag</button>  
+        <span *ngIf="!food.addedToWishList" class="wishlist">
+          <i class="bi bi-heart" (click)="updateBool(food)" ></i><!-- color heart red--> </span>
+       <span *ngIf="food.addedToWishList" class="wishlist" >
+        <i class="bi bi-heart-fill"(click)="updateBool(food)" ></i><!-- remove heart color -->  
+       </span>
+      </div>
+    </div>
+  </div>
+  <div class="pagination-main">
+    <span>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls></span>
+  </div>
+</div>
+

@@ -1,0 +1,44 @@
+.card{
+    border-top: 20px;
+    border-top-color: black;
+    border-color:black;
+    border-radius: 5px;
+}
+.specialsCard{
+    height: 160px;
+    width: 160px;   
+    transition: transform .2s;
+
+}
+.specialsCard:hover{
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Safari 3-8 */
+     transform: scale(1.5); 
+}
+.ourspecialsBox{
+    border-top-color: black;
+    border-color: grey;
+    border-radius: 5px;
+    border: 1px solid;
+    text-align: center;
+    width: 220px;
+    padding: 5px;
+}
+.pagination-main{
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}
+.wishlist{
+    margin-left: 13%;  
+    font-size: 150%;  
+    opacity: 90%;  
+    border: none;  
+    cursor: pointer;  
+    color: rgb(178, 67, 67);  
+  }
+/* .wishlist > i{
+    padding-top: 90px;
+    margin-top: 10px;    
+} */

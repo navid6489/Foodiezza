@@ -1,0 +1,88 @@
+.container{
+    background-image: url('\src\assets\images\loginbg2.jpg');
+    height: 800px;
+    width: 1280px;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+.card{
+    height: 60px;
+    margin-top: 30px;
+    padding: 20px;
+}
+.center{
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+.center img{
+    text-decoration: none;
+    color: inherit;
+    border: none;
+    outline:none;
+    height: 170px;
+    width: 280px;
+    margin: 20px 0px;
+}
+h4, h6{
+    font-weight: 400;
+}
+.card-table{
+    position: relative;
+    width: 900px;
+    margin-top: 10px;
+    margin-left: 126px;
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    word-wrap: break-word;
+    background-color: white;
+    background-clip: border-box;
+    border: 1px solid black;
+    border-radius: .25rem;
+}
+.center .btn{
+    font-size: 14px !important;
+    margin-top: 20px !important;
+    font-weight: 400;
+    padding: 12px 72px;
+    border-radius: 3px !important;
+}
+
+.keys button{
+    margin-left: none;
+}
+.cartImage{
+    height: 150px;
+    width:150px;
+}
+.empty{
+    height: 350px;
+}
+.quantity{
+    width:180px !important;
+    border: 2px !important;
+    border-color: brown;
+}
+.input-group-prepend{
+   width: 50px !important;
+   border: 2px !important;
+   border-color: black !important;
+}
+.quantity h6{
+    padding: 7px;
+}
+
+.quantity>span{
+padding: 5px;
+}
+.pagination-main{
+    margin: auto;
+    width: 50%;
+    /* border: 3px solid green; */
+    padding: 10px;
+}

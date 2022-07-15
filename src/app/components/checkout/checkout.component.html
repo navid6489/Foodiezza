@@ -1,0 +1,76 @@
+<div class="row">
+    <div class="col-sm-8">
+        <div class="billingDetails">
+        <form>            
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="bi bi-person-fill"></i> Full Name</label>
+            <input [formControl]="Name" type="text" id="fname" name="firstname" placeholder="Enter Name" required>
+            <label for="email"><i class="bi bi-envelope-fill"></i> Email</label>
+            <input [formControl]="Email"  type="text" id="email" name="email" placeholder="Enter Valid Email ">
+             <label for="adr"><i class="bi bi-house-fill"></i> Address</label>
+             <input [formControl]="Address" type="text" id="adr" name="address" placeholder="Enter Address">
+             <label for="city"><i class="fa fa-institution"></i> City</label>
+             <input [formControl]="City" type="text" id="city" name="city" placeholder="Enter City">
+             <div class="row">
+              <div class="col-50">
+              <label for="state">State</label>
+              <input [formControl]="State" type="text" id="state" name="state" placeholder="Enter State">
+              </div>
+              <div class="col-50">
+              <label for="zip">Zip</label>
+             <input [formControl]="zipCode" type="text" id="zipCode" name="zipCode" placeholder="Postal Code">
+             </div>
+             </div>  
+            <label for="city"><i class="bi bi-telephone-fill"></i> Mobile</label>
+            <input [formControl]="phoneNumber" type="text" id="phoneNumber" name="phoneNumber" placeholder="0000000000">           
+           <input  type="submit" value="Save Address" class="btn" (click)="saveBillingDetails()">
+          </form>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Review Bag</h4>
+              <div class="row">  
+                 <table class="table table-responsive">
+                     <th>Sr.No</th>
+                     <th>Product name</th>
+                     <th>Price</th>  
+                     <th>Quantity</th>
+                     <th>Total</th>  
+                 <tbody *ngFor="let fd of foodList ; let i=index">
+                     <tr>
+                         <td>{{i+1}}</td>
+                         <td>{{fd.foodName}}</td>
+                         <td>{{fd.price}}</td>    
+                         <td>{{fd.foodQuantity}}</td>                    
+                         <td>{{fd.foodQuantity*fd.price}}</td>
+                       </tr>                     
+                 </tbody>  
+             </table>                  
+            </div> <!-- row.// -->
+            </div> <!-- card-body.// -->      
+
+<div class="card shadow">
+    <div class="card-body">
+    <h4 class="mb-3">Overview</h4> 
+    <hr>
+    <dl class="dlist-align">
+        <dt>Total:</dt>
+        <dd class="h5">{{ grandTotal |currency:'INR'}}</dd>
+    </dl>
+    <hr>
+<input type="checkbox" />
+<p class="small mb-3 text-muted">By clicking you are agree with terms of condition </p>
+ <button class="btnBuyNow" ng-disabled="myForm.user.$dirty && myForm.user.$invalid ||  
+myForm.email.$dirty && myForm.email.$invalid" routerLink="/invoice" (click)="paynow()" >Buy Now</button>                    
+</div> <!-- card-body.// -->
+</div> <!-- card.// -->
+</div>
+</div>
+
+
+
+
+                            
+
+                

@@ -1,0 +1,52 @@
+<div class="banner">
+  <div class="content">
+  <h4 class="mb-3">Fresh cooked food <br/> At your Door!</h4>
+  <a routerLink="/our-specials">Order Now <i id="arrow" class="bi bi-arrow-right-circle"></i></a>
+</div>
+</div>
+<div class="container mt-5 mb-5">
+  <h1 class="text-center">How to get <span class="highlight">fresh food</span></h1>
+  <div class="row mt-5">
+        <div class="col-lg-4 mt-2">
+        <div class="stepBox">
+        <h1>1</h1>
+        <p>Sign In </p>
+        </div>
+      </div>
+      <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+              <h1>2</h1>
+              <p>Select the food</p>
+          </div>
+      </div>
+      <div class="col-lg-4 mt-2">
+          <div class="stepBox">
+              <h1>3</h1>
+              <p>your order delivered in few minutes</p>
+          </div>
+      </div>
+  </div>
+</div>
+<ul >
+    <li *ngFor="let food of foods">
+        <a>
+        <img id="imagebox" src="{{food.imageUrl}}" alt=""> <span>{{food.name}}</span>                
+            <span class="favorite {{food.favorite?'':'not'}}" >
+                ♡ 
+            </span> 
+             <div class="product-item-footer">
+              <div class="origin">
+                <span >
+                  {{food.origins}} Origin Food
+                </span>
+              </div>
+            </div>
+        </a>
+    </li>
+</ul>
+<ul>
+
+   
+
+
+

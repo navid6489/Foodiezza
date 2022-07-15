@@ -1,0 +1,49 @@
+<!--NAVBAR-->
+<div class="header" >
+    <nav class="header_top">
+        <div class="header_menu">
+            <div class="header_menu_icon">
+              <a routerLink="" routerLinkActive="link-active" >
+                <img src="/assets/images/fav.png" id="logo-img"/> 
+              </a>
+            </div>            
+           <form class="form-inline my-2 my-lg-0">
+            <input id="search-input" name="search"  [(ngModel)]="searchItem" (keyup)="search($event)" class="form-control mr-sm-2" type="search" placeholder="Search food....." aria-label="Search">
+            </form>  
+        </div>
+      <div class="ddcategory">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Category
+          </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" >             
+            <a class="dropdown-item" (click)="filter('STARTER')" routerLink="our-specials" routerLinkActive="link-active" value="STARTER">Starters</a>
+            <a class="dropdown-item" (click)="filter('VEG')" routerLink="our-specials" routerLinkActive="link-active" value="VEG">Veg</a>
+            <a class="dropdown-item" (click)="filter('BREAD')" routerLink="our-specials" routerLinkActive="link-active"  value="BREAD">Breads</a>
+            <a class="dropdown-item" (click)="filter('ITALIAN')" routerLink="our-specials" routerLinkActive="link-active" value="ITALIAN">Italian</a>
+            <a class="dropdown-item" (click)="filter('PIZZABURGER')" routerLink="our-specials" routerLinkActive="link-active" value="PIZZABURGER">Pizza and Burgers</a>            
+            <a class="dropdown-item" (click)="filter('SOUTH-INDIAN')"  routerLink="our-specials" routerLinkActive="link-active" value="SOUTH-INDIAN">South-Indian</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" (click)="filter('')" routerLink="our-specials" routerLinkActive="link-active" value="OUR-SPECIAL">Explore Taste</a>
+          </div>
+        </div>      
+       
+        <a routerLink="admin" class="Admin" id="Admin" >Admin</a>        
+          <div class="header_menu_signin ms-auto" id="signin-box">            
+            <a routerLink="log-in" class="header_menu_top_item" id="signin"  >Sign-in</a>
+            <a routerLink="registration" class="header_menu_bottom_item" id="register" >Register</a>
+            <a routerLink="wishlist" id="wishList"><i class="bi bi-heart-fill"></i></a>            
+            <a routerLink="cart" class="header_menu_bottom_item" id="cart" ><span><i class="bi bi-bag-heart"></i>
+             <div style="font-size:10px;" class="badge bg-danger">{{totalItem}}</div>
+          </span></a>            
+        </div>
+        <div class="header-after-sign-in" id="user-home">
+           
+            
+        </div>
+            
+    </nav>
+    <nav clas="header_bottom"></nav>
+</div>
+
+
+

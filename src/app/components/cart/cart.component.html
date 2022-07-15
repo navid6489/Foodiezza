@@ -1,0 +1,66 @@
+<div class="cart">
+<ng-container *ngIf="foodList.length !=0" >
+  <div class="container">
+     <div class="card-table">
+       <div class="card-product">
+        <table class="table table-responsive">
+            <thead>
+                <tr>
+                   <th>Sr.No</th>
+                   <th>Product name</th>
+                   <th>Product Image</th>
+                   <th>Price</th>  
+                   <th>Quantity</th>
+                    <th>Total</th>                   
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let food of foodList  | paginate: { itemsPerPage: 2, currentPage: p }; let i = index">
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{food.foodName}}</td>
+                <td><img class="cartImage" src="{{food.imageUrl}}"></td>
+                <td>{{food.price}}</td>
+                <td class="quantity">  
+                <span (click)="decreaseQuantity(food,food.foodQuantity)" >
+                 <i class="bi bi-patch-minus-fill"></i>                        
+                 </span>   
+                 <span>{{food.foodQuantity}}</span>                      
+                 <span (click)="increaseQuantity(food,food.foodQuantity)">
+                 <i class="bi bi-patch-plus-fill"></i>    
+                 </span>            
+                  </td>
+                <td>{{food.foodQuantity*food.price}}</td>
+                <td>          
+                <button (click)="removeItem(food)"class="btn btn-danger"><i class="bi bi-trash"></i></button>                        
+            </tr>                     
+            </tbody>
+                <tr>
+                    <td colspan="2" class="keys"></td>
+                    <td><button (click)="emptycart()"  class="btn btn-danger">Empty Cart</button></td>
+                    <td><button routerLink="/our-specials" class="btn btn-primary">Order more</button></td>
+                    <td><button routerLink="/checkout" class="btn btn-success">Checkout</button></td>
+                    <td><strong>Total All:{{ grandTotal |currency:'INR'}}</strong></td>
+                </tr>
+        </table>
+       </div>
+       <div class="pagination-main">
+           <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+     </div>
+  </div>    
+</ng-container>
+<ng-container *ngIf="foodList.length == 0">
+    <div class="empty">
+        <div class="card">
+            <h5 class="card-title">Your Bag</h5>
+        </div>
+    <div class="center">
+        <img src="../../../assets/images/emptycart.webp" alt="">
+        <h4>your cart is empty!</h4>
+        <h6>Add item to it now</h6>
+        <button  routerLink="/our-specials" class="btn btn-primary">Order now</button>
+    </div>
+    </div>
+</ng-container>
+</div>
